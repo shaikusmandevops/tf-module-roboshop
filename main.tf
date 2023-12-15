@@ -24,7 +24,7 @@ resource "null_resource" "ansible" {
         cd /home/ansible/roboshop-ansible
         git pull
         sleep 30
-        ansible-playbook -i ${var.name}-dev.usmandevops.online, main.yml -e ansible_ssh_user=centos -e ansible_ssh_private_key_file=/root/auth_file/usmanppk.pem -e component=${var.name}
+        ansible-playbook -i ${var.name}-dev.usmandevops.online, main.yml -e ansible_password=DevOps321 -e component=${var.name}
     EOF
   }
 }
