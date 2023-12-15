@@ -21,7 +21,7 @@ resource "null_resource" "ansible" {
   ]
   provisioner "local-exec" {
     command = <<EOF
-        cd /home/ansible/roboshop-ansible
+        cd /home/centos/roboshop-ansible
         git pull
         sleep 30
         ansible-playbook -i ${var.name}-dev.usmandevops.online, main.yml -e ansible_password=DevOps321 -e component=${var.name}
