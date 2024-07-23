@@ -21,6 +21,20 @@ resource "aws_route53_record" "new" {
   ttl     = 30
   records =  [aws_instance.instance.private_ip]
 }
+resource "aws_route53_record" "new1" {
+  zone_id = var.zone_id
+  name    = "${var.name}.usmandevops.online"
+  type    = "A"
+  ttl     = 30
+  records =  [aws_instance.instance.private_ip]
+}
+resource "aws_route53_record" "new2" {
+  zone_id = var.zone_id
+  name    = "${var.name}.usmandevops.online"
+  type    = "A"
+  ttl     = 30
+  records =  [aws_instance.instance.private_ip]
+}
 
 resource "null_resource" "ansible" {
   depends_on = [
